@@ -1,0 +1,9 @@
+MiniTools for Machine Learning (MTML) -- jorge johnson-- version 0.1
+
+List of Libraries required:
+In general, there is no special libraries, but take take or:
+
+    -Click
+    -NumPi
+    -Pil
+    -TKinter
