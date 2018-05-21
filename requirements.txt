@@ -7,3 +7,17 @@ In general, there is no special libraries, but take take or:
     -NumPi
     -Pil
     -TKinter
+
+
+
+Other requirements:
+
+-This version only supports Logistic Regression Model.
+
+-To avoid downloading the big file, just locate the previously download file on images and run the download command.
+
+-Size of the images to be used, can be configured in file resources.py.  At the moment of download, the application migrates images to test an train directories, resizing the images to a unique size.
+
+-Folders can be configured in resources.py file.
+
+enjoy!
