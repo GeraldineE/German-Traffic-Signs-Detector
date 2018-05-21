@@ -4,6 +4,14 @@
 Created on Fri May 11 18:03:41 2018
 
 @author: jorgejohnson
+
+
+This is the main program controlled using click library
+possible commands are:
+    download
+    infer for infering on a set of images
+    train for training a set of images
+    test  for testing a set of images
 """
 import click
 import app_infer

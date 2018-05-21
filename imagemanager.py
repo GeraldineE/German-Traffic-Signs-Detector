@@ -5,11 +5,12 @@ Created on Sun May 13 10:58:23 2018
 
 @author: jorgejohnson
 
+This module is for the management of imaes: get, resize, and show
 """
 
 import numpy
 import struct
-from PIL import Image, ImageTk, ImageEnhance
+from PIL import Image, ImageTk
 import tkinter as tk
 
 class ImageTools:

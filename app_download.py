@@ -4,6 +4,13 @@
 Created on Tue May 15 06:34:26 2018
 
 @author: jorgejohnson
+
+This module manage the download of a remote file of images, and the extraction
+of only images for classification.
+
+Images are located in test and train directories usin parameter 
+PERCENT_FOR_TESTING. This parameter can be found in file resources.py
+
 """
 
 import click

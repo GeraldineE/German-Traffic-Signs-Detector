@@ -4,6 +4,9 @@
 Created on Mon May 14 16:51:03 2018
 
 @author: jorgejohnson
+
+This is the application module for Logistic Regression.
+This module can me used to train, test, and infer
 """
 
 import click

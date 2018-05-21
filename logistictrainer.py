@@ -4,6 +4,8 @@
 Created on Sun May 13 11:01:24 2018
 
 @author: jorgejohnson
+
+
 """
 
 from filemanager import FileManager
@@ -29,14 +31,20 @@ class LogisticImageTrainer:
         self.__CLassDic = FileManager().loadClassIdDictionary()
 
     def __factorModel(self):
+        """factor a multinomial Logistic Regression Image Trainer
+        """
         self.__model = LogisticRegression(
                  multi_class='multinomial',solver='lbfgs'
                 )
         
     def trainSetIsLoaded(self): 
+        """get if there is a set of images loaded
+        """
         return len(self.__datTrain) > 0
 
     def modelTrained(self): 
+        """get if the model is trained
+        """
         return not self.__model is None
 
     def __deleteSets(self):
@@ -48,27 +56,39 @@ class LogisticImageTrainer:
             del self.__tempoLabelSet
 
     def __scoreTrainSet(self):
+        """get the score for a trained data set
+        """
         return self.__model.score(
                 self.__datTrain,self.__lblTrain
                 )
 
     def __fitTrainSet(self):
+        """fit a trained data set
+        """
         return self.__model.fit(
                 self.__datTrain,self.__lblTrain
                 )
 
     def __scoreTestSet(self):
+        """get the score for a test data set
+        """
         return self.__model.score(
                 self.__datTest,self.__lblTest
                 )
 
     def trainSetSize(self): 
+        """get the number of images in a train dataset
+        """
         return len(self.__datTrain)
     
     def testSetSize(self): 
+        """get the number of images in a test dataset
+        """
         return len(self.__datTest)
  
     def saveModel(self, filename):
+        """persist a trained model to the file system to posterior usage
+        """
         joblib.dump(self.__model, filename)
     
     def __loadSet(self,path):
